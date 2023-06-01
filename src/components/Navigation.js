@@ -6,12 +6,12 @@ import Chat from "../screens/Chat";
 import Status from "../screens/Status";
 import Calls from "../screens/Calls";
 import { Colors } from "../constants/Colors";
+import { MaterialCommunityIcons } from "react-native-vector-icons";
 
 const Tab = createMaterialTopTabNavigator();
 
 const Navigation = () => {
   const tabs = [
-    { name: "Community", component: Community },
     { name: "Chat", component: Chat },
     { name: "Status", component: Status },
     { name: "Calls", component: Calls },
@@ -32,13 +32,31 @@ const Navigation = () => {
         },
       }}
     >
+      <Tab.Screen
+        name="Community"
+        component={Community}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons
+              name="account-group"
+              size={24}
+              color={color}
+            />
+          ),
+          tabBarLabelStyle: {
+            display: "none",
+          },
+        }}
+      />
       {tabs.map((item, index) => {
         return (
           <Tab.Screen
             key={index}
             name={item.name}
             component={item.component}
-            options={{ tabBarLabel: item.name }}
+            options={{
+              tabBarLabel: item.name,
+            }}
           />
         );
       })}
