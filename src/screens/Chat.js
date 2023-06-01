@@ -1,11 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
+import Wrapper from "../components/global/Wrapper";
 
 const Chat = () => {
   return (
-    <View>
+    <Wrapper>
       <Text>Chat</Text>
-    </View>
+    </Wrapper>
   );
 };
 

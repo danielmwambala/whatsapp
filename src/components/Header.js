@@ -9,10 +9,10 @@ import {
 
 const Header = () => {
   return (
-    <SafeAreaView className="flex bg-theme-color py-4">
+    <SafeAreaView className="flex bg-theme-color pb-1 pt-6">
       <View className="flex-row items-center justify-between w-full px-4">
         {/* display app name */}
-        <Text className="text-white font-bold text-lg">WhatsApp</Text>
+        <Text className="text-white font-semibold text-xl">WhatsApp</Text>
         {/* display icons */}
         <View className="flex-row space-x-4 items-end">
           <Feather name="camera" size={20} color="white" />
