@@ -1,8 +1,8 @@
 import { View, Text, FlatList, Image, TouchableOpacity } from "react-native";
 import React, { useCallback, useEffect, useState } from "react";
-import Wrapper from "../components/global/Wrapper";
 import { MaterialCommunityIcons } from "react-native-vector-icons";
 import { chatData } from "../data/ChatData";
+import FabButton from "../components/global/FabButton";
 
 const Chat = () => {
   const [data, setData] = useState(chatData);
@@ -61,6 +61,8 @@ const Chat = () => {
     );
   }, []);
 
+  const openNewChat = () => {};
+
   return (
     <View className="flex-1 px-4">
       <FlatList
@@ -72,6 +74,16 @@ const Chat = () => {
         maxToRenderPerBatch={3}
         initialNumToRender={3}
         showsVerticalScrollIndicator={false}
+      />
+      <FabButton
+        onPressAction={openNewChat}
+        icon={
+          <MaterialCommunityIcons
+            name="android-messages"
+            size={25}
+            color="#FFFFFF"
+          />
+        }
       />
     </View>
   );

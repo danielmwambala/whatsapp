@@ -9,7 +9,7 @@ import {
 
 const Header = () => {
   return (
-    <SafeAreaView className="flex bg-theme-color pb-1 pt-8">
+    <SafeAreaView className="flex bg-theme-color pb-1 pt-4">
       <View className="flex-row items-center justify-between w-full px-4">
         {/* display app name */}
         <Text className="text-white font-semibold text-xl">WhatsApp</Text>
