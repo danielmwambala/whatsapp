@@ -3,7 +3,7 @@ import React from "react";
 
 const Navigation = () => {
   return (
-    <View>
+    <View className="flex-1">
       <Text>Navigation</Text>
     </View>
   );
