@@ -1,11 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
+import Wrapper from "../components/global/Wrapper";
 
 const Community = () => {
   return (
-    <View>
+    <Wrapper>
       <Text>Community</Text>
-    </View>
+    </Wrapper>
   );
 };
 

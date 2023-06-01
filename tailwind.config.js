@@ -27,6 +27,7 @@ module.exports = {
       // Text colors
       dark: "#333",
       green: "#a6ce38",
+      "green-light": "#25D366",
 
       //buttons - bg color
       "btn-success": "#a6ce38",
